@@ -1,0 +1,24 @@
+title = "Cookies"
+url = "/cookies"
+layout = "default"
+is_hidden = 0
+meta_description = "Manage all wintertricks.com cookies"
+
+[cookieManager]
+==
+function onStart() {
+    $this['hideSearchbox'] = true;
+}
+==
+<section class="content content--full-width content--pull-up">
+    <div class="box box--padding-0">
+        <h1 class="box__heading">Cookie settings</h1>
+        <div class="box__subheading">
+            Choose what cookies you want to accept
+        </div>
+
+        <div class="mt-4">
+            {% component 'cookieManager' %}
+        </div>
+    </div>
+</section>
