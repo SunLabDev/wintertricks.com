@@ -1,3 +1,8 @@
+
+# Customs ignores, mainly known plugins
+/modules
+/plugins/winter
+
 # Composer ignores
 /vendor
 composer.phar
