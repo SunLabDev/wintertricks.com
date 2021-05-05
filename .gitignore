@@ -1,6 +1,7 @@
 
 # Customs ignores, mainly known plugins
 /modules
+/storage
 /plugins/winter
 
 # Composer ignores
