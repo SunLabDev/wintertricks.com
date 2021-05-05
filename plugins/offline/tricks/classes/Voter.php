@@ -8,7 +8,7 @@ use October\Rain\Exception\ValidationException;
 use OFFLINE\Tricks\Models\Comment;
 use OFFLINE\Tricks\Models\Trick;
 use DB;
-use RainLab\User\Facades\Auth;
+use Winter\User\Facades\Auth;
 
 class Voter
 {

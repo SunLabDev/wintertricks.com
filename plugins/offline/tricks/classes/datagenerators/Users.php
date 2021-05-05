@@ -3,7 +3,7 @@
 
 use Faker\Generator;
 use October\Rain\Database\Model;
-use RainLab\User\Models\User;
+use Winter\User\Models\User;
 
 class Users extends AbstractGenerator
 {

@@ -8,7 +8,7 @@ use OFFLINE\Tricks\Models\Proposal;
 use OFFLINE\Tricks\Models\Tag;
 use OFFLINE\Tricks\Models\Topic;
 use OFFLINE\Tricks\Models\Trick;
-use RainLab\User\Facades\Auth;
+use Winter\User\Facades\Auth;
 use Validator;
 
 class TrickForm extends ComponentBase

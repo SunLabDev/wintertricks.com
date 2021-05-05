@@ -1,0 +1,10 @@
+{% if __SELF__.cookieManagerPage %}
+    <div class="gdpr-banner__settings">
+        <a role="link" rel="privacy" href="{{ __SELF__.cookieManagerPage | page }}"
+           data-request="onDecline"
+           data-request-success="document.location.href = '{{ __SELF__.cookieManagerPage | page }}'"
+        >
+            {{ 'offline.gdpr::lang.cookie_banner.advanced_settings' | trans }}
+        </a>
+    </div>
+{% endif %}

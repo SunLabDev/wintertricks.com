@@ -1,7 +1,7 @@
 <?php namespace OFFLINE\Tricks\Models;
 
 use DB;
-use RainLab\User\Models\User;
+use Winter\User\Models\User;
 use Str;
 
 

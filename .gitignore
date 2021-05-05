@@ -1,31 +1,32 @@
-*
-!.gitignore
-!.github
-!.github/**
-!composer.*
+# Composer ignores
+/vendor
 composer.phar
-!.env.*
-!README.md
-*.save*
-!october.yaml
-!git.cron.sh
-!Envoy.blade.php
-!.gitlab-ci.yml
-!LICENSE
-!themes
-!themes/**/*
-themes/**/assets/*.js
-themes/**/assets/*.css
-themes/**/assets/*.map
-!themes/**/assets/tagify*
-!themes/**/assets/highlight.js
-!themes/**/assets/hljs.github-gist.css
-!themes/**/assets/easymde.min.js
-!themes/**/assets/easymde.min.css
-themes/**/node_modules
-!plugins
+composer.lock
 
+# Framework ignores
+.env
+.env.*.php
+.env.php
+selenium.php
+/bootstrap/compiled.php
+.phpunit.result.cache
 
-!plugins/offline
-!plugins/offline/tricks
-!plugins/offline/tricks/**
+# Hosting ignores
+php_errors.log
+nginx-error.log
+nginx-access.log
+nginx-ssl.access.log
+nginx-ssl.error.log
+sftp-config.json
+.ftpconfig
+
+# Editor ignores
+nbproject
+.idea
+.vscode
+_ide_helper.php
+
+# Other ignores
+.DS_Store
+package-lock.json
+/node_modules

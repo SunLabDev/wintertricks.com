@@ -1,0 +1,63 @@
+1.0.1: First version of ResponsiveImages
+1.0.2:
+    - Fixed encoding problems
+    - Fixed broken media manager when using custom backend url
+1.0.3: Added alternative-src config option to support jQuery.lazyLoad plugin
+1.0.4: Fixed handling of filenames containing spaces (Thanks to webeks!)
+1.1.0: Added settings page, support for lazy-loading plugins and responsive class attributes
+1.1.1: Added compatibility with current edgeUpdate builds
+1.1.2: Fixed processing of relative pahts when October runs in a subdirectory
+1.1.3: Added french translation (thanks to damsfx)
+1.1.4: Optimized support for multi-byte character strings (thanks to sergei3456)
+1.1.5: Reverted multi-byte optimization since the change removes the DOCTYPE while parsing the html
+1.1.6: Use correct app url to determine if an image is external or local
+1.1.7: Optimized support for multi-byte character strings (thanks to sergei3456)
+1.1.8: Optimized support for installations that serve multiple domains
+1.1.9: Fixed resizing of image paths that contain spaces (thanks to adamo)
+1.2.0: Added `responsive-images:generate` artisan command to pre-generate all image sizes (thanks to kiselli)
+2.0.0: Implemented new image replacement technique (fixes lots of compatibility problems with other plugins)
+2.0.1: Ignore image tags that don't have a src attribute
+2.0.2: Fixed problem when using custom src attributes
+2.0.3: Fixed handling of relative protocol urls
+2.0.4: Added `svg` helper function to inline SVGs (see README for usage)
+2.0.5: Added missing relations for Theme and SVGInliner classes
+2.0.6: Optimized image matching to also include images with custom attributes before the src attribute
+2.0.7: Allow `| media` and `| theme` filters in the `svg` helper function
+2.0.8: Fixed php-gd compatibility problem (thanks to @mauserrifle)
+2.0.9: Reverted previous change since it introduced performance issues
+2.0.10: Re-implemented compatibility fix (thanks to @mauserrifle)
+2.0.11: Store copy of original image in the temp folder as well (makes image optimizations possible without the need to modify the original image, thanks to @mauserrifle)
+2.0.12: Reverted previous change until October's PNG resize bug is fixed (https://github.com/octobercms/library/pull/396)
+2.1.0: Added focuspoint feature
+2.1.1: Fixed bug where images were not resized under certain conditions
+2.1.2: Fixed Settings form layout
+2.1.3: Another minor bugfix release
+2.2.0: Added support for automatic WebP conversion
+2.2.1: Optimized WebP implementation
+2.2.2: Performance improvements (thanks to @mauserrifle)
+2.2.3: Optimized handling of custom src attributes 
+2.2.4: Optimized PHP 7.4 support
+2.2.5: Further optimized PHP 7.4 support
+2.2.6: Optimized WebP image quality
+2.3.0: Added support to configure multiple `src` and `srcset` attributes at once (useful for lazy loading plugins)
+2.3.1: Fixed focuspoint image generation with multiple src attributes
+2.3.2: Enabled support for cwebp to convert images to the webp format. This makes everything a lot more performant!
+2.3.3: Minor bugfix for default WebP htaccess configuration
+2.3.4: Added `RESPONSIVE_IMAGES_BASE_DIR` env variable to get more control over the source path configuration for WebP images
+2.3.5:
+    - Fixed a bug where focus points were not saved correctly
+    - add_focus_columns_to_system_files.php
+2.3.6:
+    - Fixed a bug where focus points were not saved correctly
+2.3.7:
+    - Added `data-responsive="ignore"` attribute support to skip processing of specific img tags
+2.3.8:
+    - Fixed saving of focuspoint image title and description
+2.3.9:
+    - Fixed focuspoint image output (coordinates were not set correctly)
+2.3.10:
+    - "Optimized logging of unprocessable/invalid HTML markup. These errors now also respect the 'Log unprocessable images' option correctly."
+2.3.11:
+    - "Automatically encode special chars in img sources. This solves a problem where unencoded & symbols in src attributes cancelled the img processing."
+2.3.12:
+    - "Optimized SQLite Support"

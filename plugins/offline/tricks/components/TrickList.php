@@ -4,8 +4,8 @@ use Cms\Classes\ComponentBase;
 use OFFLINE\Tricks\Models\Tag;
 use OFFLINE\Tricks\Models\Topic;
 use OFFLINE\Tricks\Models\Trick;
-use RainLab\User\Facades\Auth;
-use RainLab\User\Models\User;
+use Winter\User\Facades\Auth;
+use Winter\User\Models\User;
 
 class TrickList extends ComponentBase
 {

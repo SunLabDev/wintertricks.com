@@ -1,4 +1,4 @@
-const hostname = 'octobertricks.test'
+const hostname = 'wintertricks.test'
 const cssWhitelist = [
     'voter__arrow--active',
     'voter--voted-up',

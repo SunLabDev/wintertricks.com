@@ -5,7 +5,7 @@ use October\Rain\Database\Traits\SimpleTree;
 use October\Rain\Database\Traits\Validation;
 use October\Rain\Parse\Markdown;
 use October\Rain\Support\Facades\Html;
-use RainLab\User\Models\User;
+use Winter\User\Models\User;
 
 class Comment extends Model
 {

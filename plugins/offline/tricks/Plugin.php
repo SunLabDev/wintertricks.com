@@ -10,12 +10,12 @@ use OFFLINE\Tricks\Console\Seed;
 use OFFLINE\Tricks\Models\Tag;
 use OFFLINE\Tricks\Models\Topic;
 use OFFLINE\Tricks\Models\Trick;
-use RainLab\User\Models\User;
+use Winter\User\Models\User;
 use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
 {
-    public $require = ['RainLab.User'];
+    public $require = ['Winter.User'];
 
     public function registerComponents()
     {
@@ -39,7 +39,7 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        if (class_exists('RainLab\User\Models\User')) {
+        if (class_exists('Winter\User\Models\User')) {
             User::extend(function (User $user) {
                 $user->rules['password']              = 'required:create|between:8,255|confirmed';
                 $user->rules['password_confirmation'] = 'required_with:password|between:8,255';

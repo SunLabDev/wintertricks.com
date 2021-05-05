@@ -10,7 +10,7 @@ use OFFLINE\Tricks\Classes\Voter;
 use OFFLINE\Tricks\Models\Comment;
 use OFFLINE\Tricks\Models\Topic;
 use OFFLINE\Tricks\Models\Trick;
-use RainLab\User\Facades\Auth;
+use Winter\User\Facades\Auth;
 
 class TrickDetail extends ComponentBase
 {
@@ -48,9 +48,9 @@ class TrickDetail extends ComponentBase
     public function init()
     {
         if (!Trick::published()->count()) {
-            return; 
+            return;
         }
-        
+
         $this->trick = $this->page['trick'] = Trick
             ::published()
             ->with(['tags', 'comments', 'topics', 'author'])

@@ -7,7 +7,7 @@ use October\Rain\Database\Traits\Sluggable;
 use October\Rain\Database\Traits\Validation;
 use October\Rain\Parse\Markdown;
 use October\Rain\Support\Facades\Html;
-use RainLab\User\Models\User;
+use Winter\User\Models\User;
 use Str;
 
 

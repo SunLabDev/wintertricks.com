@@ -1,0 +1,32 @@
+<div class="gdpr-cookie-manager__groups">
+    <ul class="gdpr-cookie-manager__group-list">
+        {% for group in groups %}
+            <li>
+                <a href="javascript:;"
+                   data-handle-group-id="{{ group.id }}"
+                   class="gdpr-cookie-manager__group-list-entry
+                        {{ loop.index0 == 0 ? 'gdpr-cookie-manager__group-list-entry--active' : '' }}">
+                    <div class="gdpr-cookie-manager__group-list-name">
+                        {{ group.name }}
+                    </div>
+                    <div class="gdpr-cookie-manager__group-list-description">
+                        {{ html_clean(group.description | raw) }}
+                    </div>
+                </a>
+            </li>
+        {% endfor %}
+        <li>
+            <select class="gdpr-cookie-manager__consent_expiry" name="consent_expiry" id="gdpr">
+                {% for i in [3, 6, 12, 24, 36] %}
+                    {% set selected = __SELF__.consentExpiry | default(12) %}
+                    <option value="{{ i }}" {{ selected == i ? 'selected' }}>
+                        {{ ('offline.gdpr::lang.cookie_manager.expiry.' ~ i) | trans }}
+                    </option>
+                {% endfor %}
+            </select>
+        </li>
+        <li>
+            {% partial __SELF__ ~ '::submitbutton' %}
+        </li>
+    </ul>
+</div>
