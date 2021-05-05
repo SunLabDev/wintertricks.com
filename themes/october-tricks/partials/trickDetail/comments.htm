@@ -1,5 +1,0 @@
-{% for comment in comments %}
-    {% partial __SELF__ ~ '::comment' comment=comment %}
-{% endfor %}
-
-{{ comments | raw }}
