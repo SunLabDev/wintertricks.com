@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'noreply@domain.tld',
-        'name'    => 'Winter CMS',
+        'address' => 'contact@wintertricks.com',
+        'name'    => 'WinterTricks',
     ],
 
     /*
