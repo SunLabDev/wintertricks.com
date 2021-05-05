@@ -110,6 +110,7 @@ class TrickForm extends ComponentBase
             $trick->content    = $data['content'];
             $trick->references = $references ? array_values($references) : [];
             $trick->user_id    = optional($user)->id;
+            $trick->published_at = now();
 
             // Publish moderator tricks immediately
             if ($this->isModerator() && $trick->published_at === null) {
