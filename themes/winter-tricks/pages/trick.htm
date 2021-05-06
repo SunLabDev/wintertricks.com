@@ -8,7 +8,9 @@ slug = "{{ :slug }}"
 ==
 function onStart()
 {
-    $this['canonical'] = str_replace('winter', 'october', request()->url());
+    if (request()->url() !== 'https://wintertricks.com/tricks/how-to-switch-to-winter-cms') {
+        $this['canonical'] = str_replace('winter', 'october', request()->url());
+    }
 }
 ==
 
