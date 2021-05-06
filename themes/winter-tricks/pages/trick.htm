@@ -6,5 +6,10 @@ is_hidden = 0
 [trickDetail]
 slug = "{{ :slug }}"
 ==
+function onStart()
+{
+    $this['canonical'] = str_replace('winter', 'october', request()->url());
+}
+==
 
 {% component 'trickDetail' %}

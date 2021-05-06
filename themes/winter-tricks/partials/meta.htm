@@ -1,7 +1,7 @@
 ==
 function onStart()
 {
-    $this['canonical'] = request()->url();
+    $this['canonical'] = $this['canonical'] ?? request()->url();
 }
 ==
 {% set company_name    = 'Winter CMS Tricks' %}
