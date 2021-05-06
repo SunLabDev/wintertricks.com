@@ -44,12 +44,13 @@ class Plugin extends PluginBase
                 $user->rules['password']              = 'required:create|between:8,255|confirmed';
                 $user->rules['password_confirmation'] = 'required_with:password|between:8,255';
                 $user->addDynamicMethod('getFallbackAvatarAttribute', function () use ($user) {
-                    $url = 'https://www.gravatar.com/avatar/%s.jpg?s=%sd=wavatar';
+                    $id = str_slug($user->username);
 
-                    $hashEmail = md5(strtolower(trim($user->email)));
+                    $url = 'https://api.hello-avatar.com/adorables/%d/%s';
+
                     return [
-                        sprintf($url, $hashEmail, 45),
-                        sprintf($url, $hashEmail, 90)
+                        sprintf($url, 45, $id),
+                        sprintf($url, 45, $id)
                     ];
                 });
             });
