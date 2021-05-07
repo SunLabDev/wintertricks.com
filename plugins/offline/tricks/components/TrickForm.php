@@ -1,7 +1,8 @@
 <?php namespace OFFLINE\Tricks\Components;
 
-use Cms\Classes\ComponentBase;
 use DB;
+use Cms\Classes\ComponentBase;
+use Config;
 use October\Rain\Exception\ValidationException;
 use October\Rain\Support\Facades\Flash;
 use OFFLINE\Tricks\Models\Proposal;
@@ -110,7 +111,10 @@ class TrickForm extends ComponentBase
             $trick->content    = $data['content'];
             $trick->references = $references ? array_values($references) : [];
             $trick->user_id    = optional($user)->id;
-            $trick->published_at = now();
+
+            if (Config::get('offline.tricks::autoPublishTrick', false)) {
+                $trick->published_at = now();
+            }
 
             // Publish moderator tricks immediately
             if ($this->isModerator() && $trick->published_at === null) {
