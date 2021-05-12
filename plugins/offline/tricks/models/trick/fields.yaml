@@ -10,6 +10,10 @@ fields:
             field: title
             type: slug
         type: text
+    canonical:
+        label: Canonical
+        span: auto
+        type: text
 tabs:
     fields:
         author:

@@ -11,3 +11,7 @@
     - builder_table_create_offline_tricks_proposals.php
     - builder_table_create_offline_tricks_proposal_topic.php
     - builder_table_create_offline_tricks_proposal_tag.php
+
+1.0.2:
+    - 'Add canonical to tricks'
+    - add_canonical_column_to_tricks_table.php
