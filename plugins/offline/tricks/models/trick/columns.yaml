@@ -58,3 +58,6 @@ columns:
         label: 'Published at'
         type: datetime
         sortable: true
+    canonical:
+        label: From OctoberTricks
+        type: switch
