@@ -13,7 +13,7 @@
         </div>
         <div class="trick__meta">
             by <a class="author" href="{{ 'author-tricks' | page({username: trick.author.username}) }}">{{ trick.author.username }}</a>, last modified on {{ trick.updated_at.format('F jS, Y') }}
-            {% if trick.canonical is not null %}
+            {% if trick.canonical is not empty %}
                 - Previously published on <a class="author" href="{{ trick.canonical }}">OctoberTricks</a>
             {% endif %}
         </div>
