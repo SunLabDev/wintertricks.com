@@ -86,7 +86,7 @@ class TrickDetail extends ComponentBase
 
         if ( ! $this->property('trick_of_the_day')) {
             $user = Auth::getUser();
-            if ($this->trick->author->user_id !== $user->id) {
+            if ($this->trick->author->id !== $user->id) {
                 DB::table('offline_tricks_tricks')->where('id', $this->trick->id)->increment('pageviews');
             }
 
