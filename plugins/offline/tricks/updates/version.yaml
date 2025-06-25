@@ -15,3 +15,10 @@
 1.0.2:
     - 'Add canonical to tricks'
     - add_canonical_column_to_tricks_table.php
+
+1.0.3:
+    - Add: New Image-Upload handler on trick form / easyMDE editor.
+    - Update: package.json dependencies.
+    - Update: Minor styling issues.
+    - Fix: Search box was not visible on non-existing author pages.
+
